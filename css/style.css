@@ -47,23 +47,42 @@ li {
     height: 45px;
     line-height: 45px;
     text-align: center;
+    
+    position: relative;
 }
 .gnb_1>li>.mainNav {
     width: 100%;
     height: 100%;
     font-size: 18px;
     font-weight: 900;
+    display: block;
+}
+.gnb_1>li>.mainNav:hover {
+    color: #fff;
+    background-color: #000;
 }
 .gnb_1>li>.submenu_list {
     width: 100%;
     height: 90px;
     background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    display: none;
+}
+.gnb_1>li:hover>.submenu_list {
+    display: block;
+    z-index: 10;
+}
+.gnb_1>li>.submenu_list>li>a:hover {
+    color: #384d75;
+    font-weight: bold;
 }
 .logo {
     width: 200px;
     height: 45px;
     padding: 0 40px;
+    margin-top: -10px;
 }
+
 .gnb_2 {
     width: 500px;
     height: 45px;
@@ -93,7 +112,7 @@ li {
     height: 45px;
     line-height: 45px;
     text-align: center;
-}
+} 
 
 /* main_img */
 .index_backimg {
@@ -108,7 +127,7 @@ li {
 }
 .slides > img {
     width: 100%;
-    float: left;
+    
 }
 .index_butt {
     position: absolute;
@@ -149,7 +168,7 @@ button:focus {
    
 }
 .index_brand_txt {
-   padding: 105px 209px;
+   padding: 105px 0px 105px 300px;
 }
 .index_brand_txt1 p {
     font-size: 45px;
@@ -164,6 +183,8 @@ button:focus {
     height: 60px;
     line-height: 60px;
     border: 2px solid #333;
+    margin-left: 40px;
+    margin-top: 50px;
     
 }
 .index_brand_txt2 p {
@@ -179,61 +200,82 @@ button:focus {
     width: 100%;
     height: 500px;
     display: flex;
-    background-color: lightskyblue;
+    background-color: #f5f5f5;
 }
 .index_store_txt {
-    padding: 105px 209px;
-}
-.index_store_txt1 {
-    font-size: 45px;
-    text-align: center;
-}
-
+    padding: 105px 0px 105px 300px;
+ }
+ .index_store_txt1 p {
+     font-size: 45px;
+     font-weight: bold;
+     text-align: center;
+     padding: 10px 0;
+    
+ }
+ .index_store_txt2 {
+     display: inline-block;
+     width: 150px;
+     height: 60px;
+     line-height: 60px;
+     margin-left: 30px;
+     margin-top: 50px;
+     border: 2px solid #333;
+     
+ }
+ .index_store_txt2 p {
+     font-size: 16px;
+     text-align: center;
+ }
 /* footer style */
 .footer {
     height: 300px;
-    background-color: lightpink;
+    border-top: 1px solid #b6a6a6;
 }
-.footer_1 {
-    display: flex;
-    font-size: 15px;
+.font_size p {
+    font-size: 13px;
 }
 .footer_1 img {
     padding-top: 55px;
+    padding-right: 25px;
+    
 }
 .footer_1 p {
-    padding-top: 67px;
+    font-size: 15px;
+    display: inline-block;
 }
-.footer_2 {
-    display: flex;
-    font-size: 13px;
+.gubun p:after {
+    content: "|";
+    padding: 0 10px;
+    font-size: 12px;
+    color: #000;
+    position: relative;
 }
+.gubun p:last-child:after {
+    content: "";
+    display: none;
+  }
 .footer_2 p {
     padding-top: 25px;
-}
-.footer_3 {
-    display: flex;
-    font-size: 13px;
+    display: inline-block;
 }
 .footer_3 p {
     padding-top: 15px;
-}
-.footer_4 {
-    display: flex;
-    font-size: 13px;
+    display: inline-block;
 }
 .footer_4 p {
      padding-top: 15px;
+     display: inline-block;
 }
 .footer_5 {
     display: flex;
-    font-size: 14px;
 }
 .footer_5 img {
     padding-top: 15px;
+    padding-left: 10px;
 }
 .footer_5 p {
     padding-top: 25px;
+    padding-right: 530px;
 }
 
 
@@ -268,26 +310,22 @@ padding-left: 30px;
 .product_1 {
     padding: 60px 0 60px 70px;
 }
-.product_1_1, .product_2_1, .product_3_1,
-.product_4_1, .product_5_1, .product_6_1,
-.product_7_1, .product_8_1, .product_9_1 {
+.product_img {
     width: 300px;
     position: relative;
+   
 }
-.product_1_b, .product_2_b, .product_3_b, 
-.product_4_b, .product_5_b, .product_6_b,
-.product_7_b, .product_8_b, .product_9_b {
-    width: 300px;
-    height: 340px;
+.product_item {
     position: absolute;
     top: 0;
     left: 0;
     display: none;
     cursor: pointer;
+    width: 300px;
+    height: 340px;
+    
 }
-.product_1_1:hover .product_1_b, .product_2_1:hover .product_2_b, .product_3_1:hover .product_3_b,
-.product_4_1:hover .product_4_b, .product_5_1:hover .product_5_b, .product_6_1:hover .product_6_b,
-.product_7_1:hover .product_7_b, .product_8_1:hover .product_8_b, .product_9_1:hover .product_9_b {
+.product_img:hover .product_item {
     display: block;
 }
 .product_2 {
@@ -313,17 +351,16 @@ padding-left: 30px;
 .product_box3 {
     width: 100%;
     height: 600px;
-    border-bottom: 1px solid #b6a6a6;
     display: flex;
 }
 .product_7 {
-    padding: 0 0 60px 70px;
+    padding: 0 0 0 70px;
 }
 .product_8 {
-    padding: 0 70px 60px 70px;
+    padding: 0 70px 0 70px;
 }
 .product_9 {
-    padding: 0 70px 60px 0;
+    padding: 0 70px 0 0;
 }
 .product_txt1 {
     text-align: center;
@@ -332,12 +369,40 @@ padding-left: 30px;
 .product_txt2 {
     text-align: center;
     font-weight: 900;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 .product_txt3 {
     text-align: center;
     padding-top: 25px;
 }
+.pagination {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .pbtn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .pagenum {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .pagenum:hover {
+    display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    background-color: #384d75;
+  }
+  .currentpage {
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid #384d75;
+  }
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
