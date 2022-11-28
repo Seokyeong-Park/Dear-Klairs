@@ -27,3 +27,4 @@ function nextSlide() {
     current = 0;
     showSlides(current);
 }
+//
