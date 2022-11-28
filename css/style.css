@@ -47,7 +47,6 @@ li {
     height: 45px;
     line-height: 45px;
     text-align: center;
-    
     position: relative;
 }
 .gnb_1>li>.mainNav {
@@ -112,7 +111,15 @@ li {
     height: 45px;
     line-height: 45px;
     text-align: center;
-} 
+}
+#horizontal_underline {
+    position: absolute;
+    width: 0;
+    background-color: pink;
+    top: 0;
+    left: 0;
+    height: 4px;
+}
 
 /* main_img */
 .index_backimg {
@@ -122,11 +129,12 @@ li {
     overflow: hidden;
     position: relative;
 }
-.slides {
+#slides {
     position: absolute;
 }
-.slides > img {
+#slides > img {
     width: 100%;
+    float: left;
     
 }
 .index_butt {
