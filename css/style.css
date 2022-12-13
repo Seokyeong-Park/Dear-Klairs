@@ -14,6 +14,69 @@ menu,nav,output,ruby,section,summary,time,mark,audio,video {
   margin: 0;
   padding: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: inherit; /* 지정한 값을 쓰겠다. */
+}
+
+/* html5 reset */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1; /* =100% */
+}
+
+/* align, border, input */
+img,
+fieldset,
+a {
+  border: none;
+}
+img {
+  vertical-align: middle;
+}
+table,
+thead,
+tbody,
+tfoot {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0 none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+address,
+em {
+  /* em : 기울기 */
+  font-style: normal;
+}
+input,
+select,
+textarea,
+button,
+form img,
+label {
+  vertical-align: middle;
+}
 
 a {
     text-decoration: none;
@@ -69,7 +132,7 @@ li {
 }
 .gnb_1 li:hover .submenu_list {
     display: block;
-    z-index: 10;
+    z-index: 60;
 }
 .gnb_1 li .submenu_list li a:hover {
     color: #5a80c9;
@@ -120,7 +183,7 @@ li {
 }
 .gnb_2 li:hover .submenu_list {
     display: block;
-    z-index: 10;
+    z-index: 60;
     position: absolute;
 }
 .gnb_2 li .submenu_list li {
@@ -134,7 +197,90 @@ li {
     font-weight: bold;
 }
 
-/* main_img */
+/* main rolling */
+.container {
+    padding-bottom: 70px;
+}
+.visualRoll {
+    position: relative;
+    width: 100%;
+}
+.viewImgList {
+    position: relative;
+    width: 100%;
+}
+.viewImgList li {
+    text-align: center;
+    height: 700px;
+    line-height: 700px;
+}
+.viewImgList li.imglist0 {
+    position: relative;
+    z-index: 50;
+    background: url(../img/index_main1_img.png) no-repeat center;
+}
+.viewImgList li.imglist1 {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: url(../img/index_main2_img.png) no-repeat center;
+}
+.viewImgList li.imglist2 {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: url(../img/index_main3_img.png) no-repeat center;
+}
+.viewImgList li {
+    background-size: cover !important;
+}
+.viewImgList li .roll_content {
+    position: relative;
+}
+.viewImgList li .roll_content .roll_txtline {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    font-size: 22px;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+.rollbtnArea {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 25px;
+    z-index: 200;
+}
+.rollbtnArea .rollingbtn {
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+}
+.rollbtnArea .rollingbtn li {
+    display: inline-block;
+    margin-right: 5px;
+}
+.rollbtnArea .rollingbtn li.butt0 {
+    margin-left: 10px;
+}
+.rollbtnArea .rollingbtn li.rollstop {
+    display: none;
+}
+.rollbtnArea .rollingbtn li a {
+    vertical-align: top;
+}
+
+/* 
+index_main_img
 .index_backimg {
     clear: both;
     width: 100%;
@@ -152,18 +298,18 @@ li {
 }
 .index_butt {
     position: absolute;
-    height: 600px; /* 이미지 높이에 맞추기 */
+    height: 600px; 
     top: 0;
     border: none;
     padding: 20px;
-    background-color: transparent; /* 투명한 배경 지정 */
+    background-color: transparent; /
     color: #000;
     font-weight: 800;
     font-size: 24px;
     opacity: 1;
 }
 #prev {
-    left: 0; /* 왼족으로 붙이기 */
+    left: 0; 
 }
 #next {
     right: 0;
@@ -175,8 +321,8 @@ button:hover {
     cursor: pointer;
 }
 button:focus {
-  outline:0;  /* 아웃트라인 없앰 */
-}
+  outline:0;
+} */
 
 /* index_brand */
 .index_brand {
@@ -185,11 +331,8 @@ button:focus {
     display: flex;
     background-color: #f5f5f5;
 }
-.index_brand_img {
-   
-}
 .index_brand_txt {
-   padding: 105px 0px 105px 300px;
+   padding: 105px 0px 105px 163px;
 }
 .index_brand_txt1 p {
     font-size: 45px;
@@ -221,11 +364,86 @@ button:focus {
     color: #fff;
     font-weight: bold;
 }
+
+/* index_product */
 .index_product {
     width: 100%;
     height: 600px;
-    background-color: lightgoldenrodyellow;
+    display: flex;
+    position: relative;
 }
+.index_product_txt {
+    padding: 120px 0px 120px 190px;
+ }
+ .index_product_txt1 p {
+     font-size: 45px;
+     font-weight: bold;
+     text-align: center;
+     padding: 10px 0;
+    
+ }
+ .index_product_txt2 {
+     display: inline-block;
+     width: 150px;
+     height: 60px;
+     line-height: 60px;
+     border: 2px solid #333;
+     margin-left: 40px;
+     margin-top: 50px;
+     
+ }
+ .index_product_txt2:hover {
+     border: 2px solid #384d75;
+     background-color: #384d75;
+     color: #fff;
+  }
+ .index_product_txt2 p {
+     font-size: 16px;
+     text-align: center;
+ }
+ .index_product_txt2 p a:hover {
+     color: #fff;
+     font-weight: bold;
+ }
+
+ .index_product_img {
+    position: relative;
+    width: 1080px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+ }
+.slides {
+    position:absolute;
+    left: 0px;
+    top: 75px;
+    z-index: 1;
+    display: flex;
+    cursor: pointer;
+   
+}
+.slides.animated {
+    transition: 0.5s ease-out;
+}
+.slides li {
+    border: 1px solid #ccc;
+}
+.slides li:not(:last-child) {
+    margin-right: 60px;
+}
+.controls {
+    text-align: center;
+    padding-top: 550px;
+    cursor: pointer;
+}
+.controls span {
+   
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+
+/* index_store */
 .index_store {
     width: 100%;
     height: 500px;
@@ -233,7 +451,7 @@ button:focus {
     background-color: #f5f5f5;
 }
 .index_store_txt {
-    padding: 105px 0px 105px 300px;
+    padding: 105px 0px 105px 163px;
  }
  .index_store_txt1 p {
      font-size: 45px;
@@ -261,7 +479,7 @@ button:focus {
      font-size: 16px;
      text-align: center;
  }
- .index_store_txt2 p a:hover {
+ .index_store_txt2 p:hover {
     color: #fff;
     font-weight: bold;
 }
@@ -317,21 +535,29 @@ button:focus {
     padding-top: 25px;
     padding-right: 530px;
 }
+.last {
+    font-weight: bold;
+}
 
 /* about style */
 .about_backimg {
-    background: url(../img/about_backimg.png) no-repeat fixed;
+    background-image: url(../img/about_backimg.png);
+    background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 400px;
+    position: relative;
 }
 .about_backimg h1 {
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
     padding: 136px 0 137px;
     animation: slide 2s ease-out;
     position: absolute;
-    left: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
 }
 @keyframes slide {
@@ -341,13 +567,13 @@ button:focus {
     }
 
     to {
-        left: 300px;
+        left: 50%;
         opacity: 1;
     }
 }
 @keyframes disappear {
     from {
-        left: 300px;
+        left: 50%;
         opacity: 1;
     }
     to {
@@ -378,14 +604,13 @@ button:focus {
 
 }
 .about_subimg {
-    background: url(../img/about_subimg.png) no-repeat fixed;
+    background: url(../img/about_subimg.png) no-repeat;
     background-size: cover;
     width: 100%;
     height: 300px;
-    background-attachment: scroll, local;
 }
 .about_vegan {
-    background: url(../img/about_bg.png) fixed;
+    background: url(../img/about_bg.png);
     background-size: cover;
     width: 100%;
     height: 600px;
@@ -407,7 +632,7 @@ button:focus {
     height: 80px;
 }
 .vegan_4 {
-    padding: 78px 100px 75px;
+    padding: 76px 100px 76px;
 }
 .vegan_txt {
     padding-left: 60px;
@@ -424,6 +649,7 @@ button:focus {
 }
 .vegan_txt3 {
     font-size: 30px;
+    font-weight: bold;
     padding: 5px 0 20px;
 }
 .about_map {
@@ -437,9 +663,21 @@ button:focus {
     font-weight: bold;
     padding-bottom: 37px;
 }
+.map_box {
+    display: flex;
+    padding-top: 25px;
+}
 .map_txt2 {
     color: #146A83;
-    padding-top: 23px;
+   
+    padding-left: 10px;
+    font-weight: bold;
+}
+.map_txt3 {
+    color: #146A83;
+    
+    padding-left: 10px;
+    display: inline-block;
 }
 
 /* product style */
@@ -453,11 +691,12 @@ button:focus {
     font-size: 30px;
     font-weight: 900;
     padding-top: 110px;
-    padding-left: 30px;
+    padding-left: 88px;
 }
 .product_backimg p {
 padding-top: 25px;
-padding-left: 30px;
+padding-left:88px;
+line-height: 25px;
 }
 .product_box1 {
     width: 100%;
@@ -485,7 +724,6 @@ padding-left: 30px;
     transition: opacity 0.5s linear;
     
 }
-
 .product_img:hover .product_item {
     /* display: block; */
     opacity: 1;
@@ -565,9 +803,38 @@ padding-left: 30px;
     border: 1px solid #384d75;
   }
 
+  .to_top {
+    position: fixed;
+    right: 20px;
+    bottom: 112px;
+    text-align: center;
+    background: none;
+    z-index: 100;
+  }
+  .to_top a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-left: none;
+    border-right: none;
+    background: url(../img/ico_totop_mo.png) no-repeat center;
+    background-size: 45px;
+  }
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+}
+
+/* 모바일(768px) */
+@media all and (max-width: 768px) {
+    .header_cont {
+        flex-direction: column;
+    }
+    
+    .header_cont .logo {
+        display: inline-block;
+        padding: -100px;
+    }
 }
