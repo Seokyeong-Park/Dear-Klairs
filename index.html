@@ -5,9 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dear, Klairs</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/swiper.min.css">
+        <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="./js/main_slide.js"></script>
         
     </head>
     <body>
@@ -40,22 +44,22 @@
                                 </li>
                             </ul>
                             <h1 class="logo">
-                                <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+                                <a href="./index.html"><img src="./img/logo.png" alt="top_logo"></a>
                             </h1>
                             <ul class="gnb_2">
                                 <div class="gnb_2_box">
                                     <li>
-                                        <a href="#"  class="mainNav"><img src="./img/ico_login.png" alt=""></a>
+                                        <a href="#"  class="mainNav"><img src="./img/ico_login.png" alt="로그인/회원가입"></a>
                                         <ul class="submenu_list">
                                             <li><a href="#">로그인</a></li>
                                             <li><a href="#">회원가입</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" class="mainNav"><img src="./img/ico_cart.png" alt=""></a>
+                                        <a href="#" class="mainNav"><img src="./img/ico_cart.png" alt="장바구니"></a>
                                     </li>
                                     <li>
-                                        <a href="#" class="mainNav"><img src="./img/ico_search.png" alt=""></a>
+                                        <a href="#" class="mainNav"><img src="./img/ico_search.png" alt="검색"></a>
                                     </li>
                                 </div>
                             </ul>
@@ -66,21 +70,72 @@
             <!-- header end -->
 
             <section>
-                <!-- main_img -->
-                <div class="index_backimg">
+                 <!-- main_img -->
+                <div id="container">
+                    <div class="main_rolling_pc">
+                        <div class="visualRoll">
+                            <ul class="viewImgList">
+                                <li class="imglist0">
+                                    <div class="roll_content">
+                                        <p class="roll_txtline">USE-WELL, RE-USE-WELL</p>
+                                    </div>
+                                </li>
+                                <li class="imglist1">
+                                    <div class="roll_content">
+                                    </div>
+                                </li>
+                                <li class="imglist2">
+                                    <div class="roll_content">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="rollbtnArea">
+                                <ul class="rollingbtn">
+                                    <li class="seq butt0">
+                                        <a href="#butt">
+                                            <img src="./img/btn_rollbutt_on.png" alt="1번">
+                                        </a>
+                                    </li>
+                                    <li class="seq butt1">
+                                        <a href="#butt">
+                                            <img src="./img/btn_rollbutt_off.png" alt="2번">
+                                        </a>
+                                    </li>
+                                    <li class="seq butt2">
+                                        <a href="#butt">
+                                            <img src="./img/btn_rollbutt_off.png" alt="3번">
+                                        </a>
+                                    </li>
+                                    <li class="rollstop">
+                                        <a href="#" class="stop">
+                                            <img src="./img/btn_roll_stop.png" alt="멈춤">
+                                        </a>
+                                    </li>
+                                    <li class="rollplay">
+                                        <a href="#" class="play">
+                                            <img src="./img/btn_roll_play.png" alt="재생">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="index_backimg">
                     <div id="slides">
                         <img src="./img/index_main_img.png" alt="메인이미지1">
                         <img src="./img/index_main2_img.png" alt="메인이미지2">
                         <img src="./img/index_main3_img.png" alt="메인이미지1">
                         <button class="index_butt" id="prev">&lang;</button>
                         <button class="index_butt" id="next">&rang;</button>
-                    </div>S
-                </div>
+                    </div>
+                </div> -->
                 <!-- main_img end -->
 
                 <!-- index_brand  -->
                 <div class="index_brand">
-                    <div class="index_brand_img"><img src="./img/index_brand_img.png" alt=""></div>
+                    <div class="index_brand_img"><img src="./img/index_brand_img.png" alt="index_brand_img"></div>
                     <div class="index_brand_txt">
                         <div class="index_brand_txt1">
                             <p>Dear, Klairs</p>
@@ -92,19 +147,50 @@
                     </div>
                 </div>
 
-                <!-- idex_product -->
-                <div class="index_product"></div>
+                <!-- index_product -->
+                <div class="index_product">
+                    <div class="index_product_txt">
+                        <div class="index_product_txt1">
+                            <p>Dear, Klairs</p>
+                            <p>제품</p>
+                        </div>
+                        <div class="index_product_txt2">
+                            <p><a href="./product.html">바로가기 →</a></p>
+                        </div>
+                    </div>
+                    <div class="index_product_img">
+                        <ul class="slides">
+                            <li><img src="./img/index_product1.png" alt="index_product1"></li>
+                            <li><img src="./img/index_product2.png" alt="index_product2"></li>
+                            <li><img src="./img/index_product3.png" alt="index_product3"></li>
+                            <li><img src="./img/index_product4.png" alt="index_product1"></li>
+                            <li><img src="./img/index_product5.png" alt="index_product2"></li>
+                            <li><img src="./img/index_product6.png" alt="index_product3"></li>
+                        </ul>
+                        <p class="controls">
+                            <span class="prev">
+                                <img src="./img/btn_prevpage.png" alt="">
+                                prev
+                            </span>
+                            <span class="next">
+                                next
+                                <img src="./img/btn_nextpage.png" alt="">
+                            </span>
+                        </p>
+                    </div>
+                    
+                </div>
 
                 <!-- index_store -->
                 <div class="index_store">
-                    <div class="index_store_img"><img src="./img/index_store_img.png" alt=""></div>
+                    <div class="index_store_img"><img src="./img/index_store_img.png" alt="index_store_img"></div>
                     <div class="index_store_txt">
                             <div class="index_store_txt1">
                                 <p>Dear, Klairs</p>
                                 <p>스토어</p>
                             </div>
                             <div class="index_store_txt2">
-                                <p><a href="./product.html">바로가기 →</a></p>
+                                <p>바로가기 →</p>
                             </div>
                     </div>
                 </div>
@@ -112,7 +198,7 @@
             <footer class="footer">
                 <div class="box_inner">
                     <div class="footer_1 gubun">
-                        <img src="./img/logo.png" alt="">
+                        <img src="./img/logo.png" alt="buttom_logo">
                         <p>클레어스소개</p>
                         <p>이용안내</p>
                         <p>이용약관</p>
@@ -137,12 +223,17 @@
                     </div>
                     <div class="footer_5 font_size">
                         <p>COPYRIGHT &copy; 2022 Dear, Klairs. ALL RIGHTS RESERVED. designed & hosting by WISA</p>
-                        <div><img src="./img/ico_instagram.png" alt=""></div>
-                        <div><img src="./img/ico_blog.png" alt=""></div>
+                        <div><a href="https://www.instagram.com/dear_klairs/" target="_blank"><img src="./img/ico_instagram.png" alt="instagram"></a></div>
+                        <div><a href="https://blog.naver.com/wish_klairs" target="_blank"><img src="./img/ico_blog.png" alt="blog"></a></div>
                     </div>
+                    <p class="to_top">
+                        <a href="#" class="s_point"></a> <!-- 원래 #을 클릭하면 상단으로 감 -->
+                      </p>
                 </div>
+               
             </footer>
         </div>
-        <script src="./js/main_slide.js"></script>
+        <script src="./js/sub_slide.js"></script> 
+       
     </body>
 </html>
