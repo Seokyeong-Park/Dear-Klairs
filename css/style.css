@@ -210,14 +210,14 @@ li {
     width: 100%;
 }
 .viewImgList li {
-    text-align: center;
+    /* text-align: center; */
     height: 700px;
-    line-height: 700px;
+    /* line-height: 700px; */
 }
 .viewImgList li.imglist0 {
     position: relative;
     z-index: 50;
-    background: url(../img/index_main1_img.png) no-repeat center;
+    background: url(../img/index_main_img.png) no-repeat center;
 }
 .viewImgList li.imglist1 {
     position: absolute;
@@ -225,7 +225,7 @@ li {
     width: 100%;
     left: 0;
     top: 0;
-    background: url(../img/index_main2_img.png) no-repeat center;
+    background: url(../img/index_main22_img.png) no-repeat center;
 }
 .viewImgList li.imglist2 {
     position: absolute;
@@ -233,7 +233,7 @@ li {
     width: 100%;
     left: 0;
     top: 0;
-    background: url(../img/index_main3_img.png) no-repeat center;
+    background: url(../img/index_main33_img.png) no-repeat center;
 }
 .viewImgList li {
     background-size: cover !important;
@@ -241,15 +241,67 @@ li {
 .viewImgList li .roll_content {
     position: relative;
 }
-.viewImgList li .roll_content .roll_txtline {
+.viewImgList li .roll_txtline1 {
     position: absolute;
-    left: 0;
-    bottom: 60px;
-    width: 100%;
+    left: 120px;
+    top: 230px;
+    /* width: 100%; */
     line-height: 1;
-    text-align: center;
-    font-size: 22px;
-    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    /* letter-spacing: 2px; */
+}
+.viewImgList li .roll_txtline2 {
+    position: absolute;
+    left: 120px;
+    top: 300px;
+    /* width: 100%; */
+    line-height: 1.3;
+    font-size: 30px;
+    color: #333;
+    letter-spacing: 2px;
+}
+.viewImgList li .roll_txtline3 {
+    position: absolute;
+    left: 120px;
+    top: 270px;
+    /* width: 100%; */
+    line-height: 1;
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    /* letter-spacing: 2px; */
+}
+.viewImgList li .roll_txtline4 {
+    position: absolute;
+    left: 120px;
+    top: 350px;
+    /* width: 100%; */
+    line-height: 1.3;
+    font-size: 30px;
+    color: #333;
+    letter-spacing: 2px;
+}
+.viewImgList li .roll_txtline5 {
+    position: absolute;
+    left: 120px;
+    top: 250px;
+    /* width: 100%; */
+    line-height: 1;
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    /* letter-spacing: 2px; */
+}
+.viewImgList li .roll_txtline6 {
+    position: absolute;
+    left: 120px;
+    top: 330px;
+    /* width: 100%; */
+    line-height: 1.3;
+    font-size: 30px;
+    color: #333;
     letter-spacing: 2px;
 }
 
@@ -354,13 +406,13 @@ button:focus {
 .index_brand_txt2:hover {
     border: 2px solid #384d75;
     background-color: #384d75;
-    color: #fff;
+      color: #fff;
  }
 .index_brand_txt2 p {
     font-size: 16px;
     text-align: center;
 }
-.index_brand_txt2 p a:hover {
+.index_brand_txt2 p:hover {
     color: #fff;
     font-weight: bold;
 }
@@ -401,7 +453,7 @@ button:focus {
      font-size: 16px;
      text-align: center;
  }
- .index_product_txt2 p a:hover {
+ .index_product_txt2 p:hover {
      color: #fff;
      font-weight: bold;
  }
@@ -825,6 +877,116 @@ line-height: 25px;
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+}
+
+/* ************************************** */
+/* laptop(max-width:1023px - min-width:769px) */
+@media all and (max-width: 1500px) and (min-width: 769px) {
+    /* .box_inner {
+        width: 1200px;
+        height: 100vh;
+        margin: 0 auto;
+        background-color: lightblue;
+    } */
+
+    .viewImgList li .roll_txtline1 {
+        position: absolute;
+        left: 120px;
+        top: 230px;
+        /* width: 100%; */
+        line-height: 1;
+        font-size: 25px;
+        font-weight: bold;
+        color: #333;
+        /* letter-spacing: 2px; */
+    }
+    .viewImgList li .roll_txtline2 {
+        position: absolute;
+        left: 120px;
+        top: 300px;
+        /* width: 100%; */
+        line-height: 1.3;
+        font-size: 22px;
+        color: #333;
+        letter-spacing: 2px;
+    }
+    .viewImgList li .roll_txtline3 {
+        position: absolute;
+        left: 120px;
+        top: 270px;
+        /* width: 100%; */
+        line-height: 1;
+        font-size: 25px;
+        font-weight: bold;
+        color: #333;
+        /* letter-spacing: 2px; */
+    }
+    .viewImgList li .roll_txtline4 {
+        position: absolute;
+        left: 120px;
+        top: 350px;
+        /* width: 100%; */
+        line-height: 1.3;
+        font-size: 22px;
+        color: #333;
+        letter-spacing: 2px;
+    }
+    .viewImgList li .roll_txtline5 {
+        position: absolute;
+        left: 120px;
+        top: 250px;
+        /* width: 100%; */
+        line-height: 1;
+        font-size: 25px;
+        font-weight: bold;
+        color: #333;
+        /* letter-spacing: 2px; */
+    }
+    .viewImgList li .roll_txtline6 {
+        position: absolute;
+        left: 120px;
+        top: 330px;
+        /* width: 100%; */
+        line-height: 1.3;
+        font-size: 22px;
+        color: #333;
+        letter-spacing: 2px;
+    }
+    /* ********************************** */
+    .index_brand_img img {
+        width: 900px;
+        height: 500px;
+    }
+    .index_brand_txt {
+        padding: 105px 0px 105px 130px;
+     }
+
+    /* .index_product_img {
+        position: relative;
+        width: 1000px;
+        height: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .slides li img {
+        width: 200px;
+        height: 400px;
+    }
+    .slides li:not(:last-child) {
+        margin-right: 30px;
+    } */
+    .index_product_txt {
+        padding: 120px 0px 120px 70px;
+    }
+
+    .index_store_img img {
+        width: 900px;
+        height: 500px;
+    }
+    .index_store_txt {
+        padding: 105px 0px 105px 130px;
+    }
+     
 }
 
 /* 모바일(768px) */
