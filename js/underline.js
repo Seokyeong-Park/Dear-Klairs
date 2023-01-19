@@ -9,4 +9,3 @@ function horizontalIndicator(e) {
     horizontalUnderline.style.width = e.currentTarget.offsetWidth + "px";
     horizontalUnderline.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight + "px"
 }
-//
